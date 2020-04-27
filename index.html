@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <div id="debug">
+            <pre class="grid-output"></pre>
+        </div>
+        <div id="instructions">
+            <p>
+                GOAL: create as many stacks of 3 turtles of descending size as
+                possible before the grid is full.  Stacks should be laid out:
+            </p>
+            <p>
+                <div orientation="1" class="turtle green size-1" locked="true"><div class="head"></div><div class="tail"></div></div>
+                <div orientation="1" class="turtle green size-2" locked="true"><div class="head"></div><div class="tail"></div></div>
+                <div orientation="1" class="turtle green size-3" locked="true"><div class="head"></div><div class="tail"></div></div>
+            </p>
+            <p>
+                Use ⬅️⬇️➡️ keys to move the turtle around the grid while they fall
+            </p>
+            <p>
+                Turtles walk around on top on the floor and on top of other
+                turtles until another turtle lands on top of them. When a turtle
+                lands on another turtle, the bottom turtle will stop walking.
+            </p>
+        </div>
+
+        <script src="src/index.ts"></script>
+    </body>
+</html>

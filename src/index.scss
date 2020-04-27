@@ -1,0 +1,210 @@
+#instructions {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.turtle {
+  box-sizing: border-box;
+  height: 24px;
+  margin: 4px 4px 4px 4px;
+  border-top: 16px solid rgba(0, 128, 0, 0.3);
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+  line-height: 0;
+}
+.head {
+  position: absolute;
+  background-color: lightgreen;
+  width: 20px;
+  height: 14px;
+  border-top-right-radius: 14px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 4px;
+  top: -20px;
+  right: -4px;
+  box-shadow: 0px 1px 3px 1px green;
+}
+.tail {
+  position: absolute;
+  top: -18px;
+  left: 0px;
+  height: 14px;
+  width: 5px;
+  background-color: lightgreen;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 1px 3px 1px green;
+}
+
+[orientation="-1"] {
+  transform: scale(-1, 1);
+}
+
+.green {
+  background-color: lightgreen;
+  border-top-color: rgba(0, 128, 0, 0.3);
+}
+.size-1 {
+  width: calc(32px * 1 - 8px);
+}
+.size-2 {
+  width: calc(32px * 2 - 8px);
+}
+.size-3 {
+  width: calc(32px * 3 - 8px);
+}
+
+#app {
+  border: 1px solid #ccc;
+  padding: 10px;
+
+  #scoreboard {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: calc(32px * 10);
+    height: 32px;
+
+    #score, #stacks {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      color: darkgreen;
+      font-weight: bold;
+      text-align: center;
+      flex: 1 1 50%;
+    }
+  }
+
+  .turtle {
+    position: absolute;
+    top: 0;
+    left: calc(32px * 5);
+    box-shadow: 0px 3px 5px 2px darkgreen;
+  }
+
+  #frame {
+    position: relative;
+    border: 1px solid black;
+    height: calc(32px * 15);
+    width: calc(32px * 10);
+    background-image: linear-gradient(to right, #dedede 1px, transparent 0),
+      linear-gradient(to bottom, #dedede 1px, transparent 0);
+    background-size: 32px 32px;
+
+    #gameOverLabel {
+      display: none;
+      position: absolute;
+      z-index: 5;
+      top: calc(32px * 6);
+      width: calc(32px * 10);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: darkgreen;
+      text-shadow:
+        -1px -1px 5px lightgreen,
+        1px -1px 5px lightgreen,
+        -1px 1px 5px lightgreen,
+        1px 1px 5px lightgreen;
+
+    }
+  }
+
+  [row="0"] {
+    top: calc(32px * 0);
+  }
+  [row="1"] {
+    top: calc(32px * 1);
+  }
+  [row="2"] {
+    top: calc(32px * 2);
+  }
+  [row="3"] {
+    top: calc(32px * 3);
+  }
+  [row="4"] {
+    top: calc(32px * 4);
+  }
+  [row="5"] {
+    top: calc(32px * 5);
+  }
+  [row="6"] {
+    top: calc(32px * 6);
+  }
+  [row="7"] {
+    top: calc(32px * 7);
+  }
+  [row="8"] {
+    top: calc(32px * 8);
+  }
+  [row="9"] {
+    top: calc(32px * 9);
+  }
+  [row="10"] {
+    top: calc(32px * 10);
+  }
+  [row="11"] {
+    top: calc(32px * 11);
+  }
+  [row="12"] {
+    top: calc(32px * 12);
+  }
+  [row="13"] {
+    top: calc(32px * 13);
+  }
+  [row="14"] {
+    top: calc(32px * 14);
+  }
+
+  [column="0"] {
+    left: calc(32px * 0);
+  }
+  [column="1"] {
+    left: calc(32px * 1);
+  }
+  [column="2"] {
+    left: calc(32px * 2);
+  }
+  [column="3"] {
+    left: calc(32px * 3);
+  }
+  [column="4"] {
+    left: calc(32px * 4);
+  }
+  [column="5"] {
+    left: calc(32px * 5);
+  }
+  [column="6"] {
+    left: calc(32px * 6);
+  }
+  [column="7"] {
+    left: calc(32px * 7);
+  }
+  [column="8"] {
+    left: calc(32px * 8);
+  }
+  [column="9"] {
+    left: calc(32px * 9);
+  }
+
+  [locked="true"] {
+    box-shadow: 0px 1px 1px 1px green;
+  }
+
+}
+
+#debug {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+}
+
+.grid-output {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+  transform: rotate(90deg);
+}
